@@ -7,15 +7,22 @@ namespace Curso_de_net_core
     {
         static void Main()
         {
-            Object[] parametros = { "Eli", 26, true };
-            new Program().metodo(parametros);
+            int data;
+            new Program().metodo(out data);
+            Console.WriteLine(data);
             Console.ReadLine();
+        //    int edad = 26;
+        //    int data = 57;
+        //    new Program().metodo(edad);
+        //    Console.ReadLine();
+        //}
+        //private void metodo(in int valor)
+        //{
+        //    Console.WriteLine(valor);
         }
-        private void metodo(object[] parametros)
+        private void metodo(out int valor)
         {
-            String nombre = (string)parametros[0];
-            int edad = (int)parametros[1];
-            bool valor = (bool)parametros[2];
+            valor = 50 + 20;
         }
 
     }
