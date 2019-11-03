@@ -5,50 +5,20 @@ namespace Curso_de_net_core
 {
     class Program
     {
+        readonly int valor;
+        const int VALOR = 98;
+
+        public Program()
+        {
+            valor = 10;
+        }
         static void Main()
         {
-            int opcion, repetir = 0;
-            var con = new Conversor();
-            do
-            {
-                Console.WriteLine("Escoja una de las opciones");
-                Console.WriteLine("1 - Convertir m/s a km/h");
-                Console.WriteLine("2 - Convertir km/h a m/s");
-                opcion = Convert.ToInt32(Console.ReadLine());
-                switch (opcion)
-                {
-                    case 1:
-                        con.Conversor1();
-                        break;
-                    case 2:
-                        con.Conversor2();
-                        break;
-                    default:
-                        Console.WriteLine("Opción errónea");
-                        break;
-                }
-                Console.WriteLine("Si desea repetir coloque el valor de 1 o cualquier tecla para salir");
-                repetir = Convert.ToInt32(Console.ReadLine());
-            } while (repetir == 1);
+            var data = new Program();
 
-        }
-        class Conversor
-        {
+            Console.WriteLine($"{VALOR}");
 
-            private double velocidad;
-
-            public void Conversor1()
-            {
-                Console.WriteLine("Introduzca una velocidad en m/s");
-                velocidad = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"{velocidad} m/s = {velocidad * 3600 / 1000 } km/h");
-            }
-            public void Conversor2()
-            {
-                Console.WriteLine("Introduzca una velocidad en km/h");
-                velocidad = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine($"{velocidad} km/h = {velocidad * 1000 / 3600 } m/s");
-            }
+            //Argumentos opcionales
 
             //    var data = new Program();
             //    data.metodo("C#");
