@@ -1,31 +1,48 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
-namespace Curso_de_net_core
+namespace CursoUdemyCSharp
 {
     class Program
     {
-        readonly int valor;
-        const int VALOR = 98;
-
-        public Program()
-        {
-            valor = 10;
-        }
         static void Main()
         {
-            var data = new Program();
-
-            Console.WriteLine($"{VALOR}");
-
-            //Argumentos opcionales
-
-            //    var data = new Program();
-            //    data.metodo("C#");
-            //}
-            //private void metodo(String curso, String nombre = "Eli", int cantidad = 26)
+            //var data = new Estudiante();
+            //data.Nombre = "Eli";
+            List<Object> lista = new List<Object>();
+            lista.Add("Eli");
+            lista.Add(32);
+            lista.Add(true);
+            //lista.Remove(32);
+            //lista.ForEach(item => Console.WriteLine(item));
+            lista.Insert(2, "Andy");
+            //lista.Clear();
+            lista.Reverse();
+            Console.WriteLine(lista.Exists(e => e.Equals("Eli")));
+            foreach(var item in lista)
+            {
+                Console.WriteLine(item);
+            }
+            //for(int i = 0; i < lista.Count; i++)
             //{
-            //    Console.WriteLine(curso);
+            //    Console.WriteLine(lista[i]);
+            //}
+
+            //int j = 0;
+            //for(; ; )
+            //{
+            //    if (j < lista.Count)
+            //    {
+            //        Console.WriteLine(lista[j]);
+            //        j++;
+            //    }
+            //    else
+            //        break;
+            //}
+           // Console.WriteLine(lista.Count);
+            Console.ReadKey();
+
         }
     }
 }
