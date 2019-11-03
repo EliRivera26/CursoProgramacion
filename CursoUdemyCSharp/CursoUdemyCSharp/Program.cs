@@ -7,53 +7,55 @@ namespace Curso_de_net_core
     {
         static void Main()
         {
-            //    int data;
-            //    new Program().metodo(out data);
-            //    Console.WriteLine(data);
-            //    Console.ReadLine();
+            int opcion, repetir = 0;
+            var con = new Conversor();
+            do
+            {
+                Console.WriteLine("Escoja una de las opciones");
+                Console.WriteLine("1 - Convertir m/s a km/h");
+                Console.WriteLine("2 - Convertir km/h a m/s");
+                opcion = Convert.ToInt32(Console.ReadLine());
+                switch (opcion)
+                {
+                    case 1:
+                        con.Conversor1();
+                        break;
+                    case 2:
+                        con.Conversor2();
+                        break;
+                    default:
+                        Console.WriteLine("Opción errónea");
+                        break;
+                }
+                Console.WriteLine("Si desea repetir coloque el valor de 1 o cualquier tecla para salir");
+                repetir = Convert.ToInt32(Console.ReadLine());
+            } while (repetir == 1);
+
+        }
+        class Conversor
+        {
+
+            private double velocidad;
+
+            public void Conversor1()
+            {
+                Console.WriteLine("Introduzca una velocidad en m/s");
+                velocidad = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"{velocidad} m/s = {velocidad * 3600 / 1000 } km/h");
+            }
+            public void Conversor2()
+            {
+                Console.WriteLine("Introduzca una velocidad en km/h");
+                velocidad = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine($"{velocidad} km/h = {velocidad * 1000 / 3600 } m/s");
+            }
+
+            //    var data = new Program();
+            //    data.metodo("C#");
             //}
-
-            //private void metodo(out int valor)
+            //private void metodo(String curso, String nombre = "Eli", int cantidad = 26)
             //{
-            //    valor = funcion();
-
-            //    int funcion()
-            //    {
-            //        return 50 + 30;
-            //    }
-
-            int[] array = { 1, 2, 2, 3, 3, 3 };
-            int[] list = new int[array.Length];
-            for (int i = 0; i < array.Length; i++)
-            {
-                int count = 0;
-                for (int j = 0; j < array.Length; j++)
-                {
-                    if (array[i] == array[j])
-                    {
-                        count++;
-                        if (numero(array[i]))
-                        {
-                            list[i] = array[i];
-                        }
-                    }
-                }
-                if (list[i] != 0)
-                {
-                    Console.WriteLine(list[i] + " se repite: " + count);
-                }
-            }
-            bool numero(int num)
-            {
-                for (int i = 0; i < list.Length; i++)
-                {
-                    if (list[i] == num)
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
+            //    Console.WriteLine(curso);
         }
     }
 }
