@@ -14,13 +14,11 @@ namespace CursoUdemyCSharp
         {
             new Program("Ya casi es mi cumple").getProducto();
             Console.ReadKey();
-            //new Program().getProducto();
-            //Console.ReadKey();
 
         }
-        protected override void getProducto()
-        {
-            Console.WriteLine("El 10 de enero");
-        }
+        //protected override void getProducto()
+        //{
+        //    Console.WriteLine("El 10 de enero");
+        //}
     }
 }

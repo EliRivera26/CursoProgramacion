@@ -4,14 +4,14 @@ using System.Text;
 
 namespace CursoUdemyCSharp
 {
-    public class Menu
+    public class Menu : Principal
     {
         private string s;
         public Menu(string s)
         {
             this.s = s;
         }
-        protected virtual void getProducto()
+        public override void getProducto()
         {
             Console.WriteLine(s);
         }
