@@ -73,6 +73,26 @@ namespace Estudiantes.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adelante {
+            get {
+                object obj = ResourceManager.GetObject("adelante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap atras {
+            get {
+                object obj = ResourceManager.GetObject("atras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap baseline_cancel_white_18dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_cancel_white_18dp", resourceCulture);
@@ -106,6 +126,26 @@ namespace Estudiantes.Properties {
         internal static System.Drawing.Bitmap baseline_done_white_18dp {
             get {
                 object obj = ResourceManager.GetObject("baseline_done_white_18dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hasta_el_final {
+            get {
+                object obj = ResourceManager.GetObject("hasta el final", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hasta_el_inicio {
+            get {
+                object obj = ResourceManager.GetObject("hasta el inicio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

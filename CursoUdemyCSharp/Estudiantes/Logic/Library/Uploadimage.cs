@@ -25,5 +25,10 @@ namespace Logic.Library
             }
 
         }
+        public byte[] ImageToByte(Image img)
+        {
+            var converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
     }
 }

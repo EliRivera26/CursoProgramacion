@@ -1,4 +1,5 @@
 ﻿using Logic;
+using Logic.Library;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,28 @@ namespace Estudiantes
 {
     public partial class Form1 : Form
     {
-        private LEstudiantes estudiante = new LEstudiantes();
+        private LEstudiantes estudiante;
+        //private Librarys librarys;
         public Form1()
         {
             InitializeComponent();
+            //librarys = new Librarys();
+            var listTextBox = new List<TextBox>();
+            listTextBox.Add(textBox3Nid);
+            listTextBox.Add(textBox1Nombre);
+            listTextBox.Add(textBox2Apellido);
+            listTextBox.Add(textBox1Email);
+            var listLabel = new List<Label>();
+            listLabel.Add(labelNid);
+            listLabel.Add(labelNombre);
+            listLabel.Add(labelApellido);
+            listLabel.Add(labelEmail);
+            Object[] objetos = { 
+                fotoEstudiante,
+                Properties.Resources.maxresdefault,
+                dataGridView1
+            };
+            estudiante = new LEstudiantes(listTextBox, listLabel, objetos);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,7 +45,7 @@ namespace Estudiantes
 
         private void PictureBoxImage_Click(object sender, EventArgs e)
         {
-            estudiante.CargarImagen(fotoEstudiante);
+            estudiante.uploadimage.CargarImagen(fotoEstudiante);
         }
 
         private void TextBox3Nid_TextChanged_1(object sender, EventArgs e)
@@ -81,45 +100,28 @@ namespace Estudiantes
                 labelEmail.Text = "E-mail";
             }
         }
+        private void TextBox3Nid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            estudiante.textBoxEvent.numberKeyPress(e);
+        }
 
         private void TextBox1Nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            estudiante.textBoxEvent.textKeyPress(e);
         }
 
         private void TextBox2Apellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            estudiante.textBoxEvent.textKeyPress(e);
         }
-
-        private void TextBox1Email_KeyPress(object sender, KeyPressEventArgs e)
+        private void ButtonAgrerar_Click(object sender, EventArgs e)
         {
-
+            estudiante.Registrar();
         }
 
-        private void textBox3Nid_TextChanged_1(object sender, EventArgs e)
+        private void textBox1Buscar_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3Nid.Text.Equals(""))
-            {
-                labelNid.ForeColor = Color.LightSlateGray;
-            }
-            else
-            {
-                labelNid.ForeColor = Color.Green;
-                labelNid.Text = "Nid";
-            }
+            estudiante.SearchEstudiante(textBox1Buscar.Text);
         }
-
-        private void textBox3Nid_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-        private void TextBox3Nid_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
-
     }
 }
