@@ -30,10 +30,12 @@ namespace Estudiantes
             listLabel.Add(labelNombre);
             listLabel.Add(labelApellido);
             listLabel.Add(labelEmail);
+            listLabel.Add(labelPagina);
             Object[] objetos = { 
                 fotoEstudiante,
                 Properties.Resources.maxresdefault,
-                dataGridView1
+                dataGridView1,
+                numericUpDown1
             };
             estudiante = new LEstudiantes(listTextBox, listLabel, objetos);
         }
@@ -122,6 +124,31 @@ namespace Estudiantes
         private void textBox1Buscar_TextChanged(object sender, EventArgs e)
         {
             estudiante.SearchEstudiante(textBox1Buscar.Text);
+        }
+
+        private void buttonFinal_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Primero");
+        }
+
+        private void buttonAtras_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Anterior");
+        }
+
+        private void buttonAdelante_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Siguiente");
+        }
+
+        private void buttonInicio_Click(object sender, EventArgs e)
+        {
+            estudiante.Paginador("Ultimo");
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            estudiante.Registro_Paginas();
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.buttonFinal = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelPagina = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -342,7 +342,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.BackColor = System.Drawing.Color.White;
             this.groupBox4.Controls.Add(this.numericUpDown1);
-            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.labelPagina);
             this.groupBox4.Controls.Add(this.buttonInicio);
             this.groupBox4.Controls.Add(this.buttonAdelante);
             this.groupBox4.Controls.Add(this.buttonAtras);
@@ -369,6 +369,7 @@
             this.buttonInicio.Size = new System.Drawing.Size(61, 32);
             this.buttonInicio.TabIndex = 9;
             this.buttonInicio.UseVisualStyleBackColor = false;
+            this.buttonInicio.Click += new System.EventHandler(this.buttonInicio_Click);
             // 
             // buttonAdelante
             // 
@@ -384,6 +385,7 @@
             this.buttonAdelante.Size = new System.Drawing.Size(61, 32);
             this.buttonAdelante.TabIndex = 8;
             this.buttonAdelante.UseVisualStyleBackColor = false;
+            this.buttonAdelante.Click += new System.EventHandler(this.buttonAdelante_Click);
             // 
             // buttonAtras
             // 
@@ -399,6 +401,7 @@
             this.buttonAtras.Size = new System.Drawing.Size(61, 32);
             this.buttonAtras.TabIndex = 7;
             this.buttonAtras.UseVisualStyleBackColor = false;
+            this.buttonAtras.Click += new System.EventHandler(this.buttonAtras_Click);
             // 
             // buttonFinal
             // 
@@ -414,6 +417,7 @@
             this.buttonFinal.Size = new System.Drawing.Size(61, 32);
             this.buttonFinal.TabIndex = 6;
             this.buttonFinal.UseVisualStyleBackColor = false;
+            this.buttonFinal.Click += new System.EventHandler(this.buttonFinal_Click);
             // 
             // dataGridView1
             // 
@@ -421,14 +425,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(10, 23);
             this.dataGridView1.Name = "dataGridView1";
@@ -449,17 +453,17 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Lista de estudiantes";
             // 
-            // label6
+            // labelPagina
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(272, 306);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 25);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Página";
+            this.labelPagina.AutoSize = true;
+            this.labelPagina.BackColor = System.Drawing.Color.White;
+            this.labelPagina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPagina.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelPagina.Location = new System.Drawing.Point(272, 306);
+            this.labelPagina.Name = "labelPagina";
+            this.labelPagina.Size = new System.Drawing.Size(79, 25);
+            this.labelPagina.TabIndex = 10;
+            this.labelPagina.Text = "Página";
             // 
             // numericUpDown1
             // 
@@ -477,6 +481,7 @@
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // Form1
             // 
@@ -539,7 +544,7 @@
         private System.Windows.Forms.Button buttonAtras;
         private System.Windows.Forms.Button buttonFinal;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelPagina;
     }
 }
 
